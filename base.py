@@ -4,7 +4,7 @@ from card_define import NUMBER
 
 
 class WinAlgorithm(object):
-    """普通胡牌算法 3N + 2"""
+    """普通算法 3N + 2"""
 
     def __init__(self, raw=False):
         self.stack = []  # 牌组栈
