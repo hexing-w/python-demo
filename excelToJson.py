@@ -35,6 +35,10 @@ def savetojson(path,save_path,name):
 			for i in range(0,ncols):
 				key = sheet.cell(0,i).value
 				s = sheet.cell(rownum,i).value
+				ctype = sheet.cell(rownum,i).ctype #获取数据类型
+				if ctype == 2 and s % 1 == 0:#如果是整型数据
+					s= int(s)
+					print(s)
 				dic[key] = s
 			arr.append(dic)
 
